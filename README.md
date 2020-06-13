@@ -33,7 +33,7 @@ Creates an object map of `<package#name>: <path-to-package-json>` that you can u
 See the [`resolve` options] section for details for any of these options. Below are their default values. For the most part, `workspacePath`, `include` and `exclude` will likely be the ones you want to play with.
 
 ```js
-import workspace from '@amzn/workspace-resolver'
+import workspace from 'workspace-resolver'
 
 workspace.resolve({
   deep: Infinity,
@@ -44,7 +44,7 @@ workspace.resolve({
 })
 
 // {
-//   '@amzn/workspace-resolver': '/workspace/workspace-resolver',
+//   'workspace-resolver': '/workspace/workspace-resolver',
 //   'my-app': '/workspace/app',
 // }
 ```
@@ -55,10 +55,10 @@ workspace.resolve({
 Spawns a process. See the [`spawn` options] section for details for any of these options.
 
 ```js
-import workspace from '@amzn/workspace-resolver'
+import workspace from 'workspace-resolver'
 
 workspace.spawn({
-  pkgName: '@amzn/workspace-resolver',
+  pkgName: 'workspace-resolver',
   pkgPath: path.resolve(__dirname, '..', 'WorkspaceResolver'),
 }, 'npm', ['run', 'watch'])
 
@@ -70,7 +70,7 @@ workspace.spawn({
 If you are planning to spawn watch processes, you'll probably want to use these together:
 
 ```js
-import workspace from '@amzn/workspace-resolver'
+import workspace from 'workspace-resolver'
 
 const alias = workspace.resolve({workspacePath: path.resolve(__dirname, '..')})
 
@@ -81,8 +81,8 @@ Object.entries(alias).forEach(([pkgName, pkgPath]) => {
 
 // Run "make build --watch" in a single alias
 workspace.spawn({
-  pkgName: '@amzn/workspace-resolver',
-  pkgPath: alias['@amzn/workspace-resolver'],
+  pkgName: 'workspace-resolver',
+  pkgPath: alias['workspace-resolver'],
 }, 'make', ['build', '--watch'])
 
 ```
@@ -117,11 +117,11 @@ workspace.spawn({
 ## [Common Integration Tips]
 [Common Integration Tips]: #-common-integration-tips-
 
-Below are suggested uses for integrating these utilities with other build tools. If you would like to create a plugin for any of these; 1. You are awesome! ❤️ 2. Please share it with <wfarley@amazon.com> so I can reference your plugin in these docs.
+Below are suggested uses for integrating these utilities with other build tools. If you would like to create a plugin for any of these; 1. You are awesome! ❤️ 2. Please let us know by creating a ticket so we can reference your plugin in these docs.
 
 * Webpack: [WorkspaceResolverWebpackPlugin] or manually with [webpack#resolve.alias]
 * Rollup: [@rollup/plugin-alias](https://www.npmjs.com/package/@rollup/plugin-alias)
-* TypeScript: [TypeScript alias guide](https://dev.to/larswaechter/path-resolve-with-typescript-in-nodejs-4353)
+* TypeScript: [TypeScript alias guide](https://dev.to/larswaechter/path-aliases-with-typescript-in-nodejs-4353)
 * Babel: [babel-plugin-module-resolver](https://www.npmjs.com/package/babel-plugin-module-resolver)
 * Other: [module-alias](https://www.npmjs.com/package/module-alias)
 

@@ -1,5 +1,5 @@
 {
-  "name": "@amzn/workspace-resolver",
+  "name": "workspace-resolver",
   "version": "0.0.1",
   "description": "Utility for development on multiple library packages in a workspace. Creates aliases for library packages so you don't have to rebuild both packages to see changes",
   "main": "src/index.js",
