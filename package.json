@@ -1,0 +1,45 @@
+{
+  "name": "@amzn/workspace-resolver",
+  "version": "0.0.1",
+  "description": "Utility for development on multiple library packages in a workspace. Creates aliases for library packages so you don't have to rebuild both packages to see changes",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run lint && npm run test:coverage",
+    "lint": "eslint .",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "engines": {
+    "node": ">=8.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/amzn/workspace-resolver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amzn/workspace-resolver/issues"
+  },
+  "homepage": "https://github.com/amzn/workspace-resolver",
+  "author": "Amazon",
+  "contributors": [
+    "Will Farley <wfarley@amazon.com>"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "fast-glob": "^3.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0"
+  }
+}
