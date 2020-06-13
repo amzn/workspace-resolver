@@ -1,6 +1,6 @@
 # Workspace Resolver
-[![npm version](https://img.shields.io/npm/v/workspace-resolver.svg?style=flat-square)](https://badge.fury.io/js/workspace-resolver)
-![license](https://img.shields.io/npm/l/workspace-resolver.svg?style=flat-square)
+[![npm version](https://img.shields.io/npm/v/workspace-resolver.svg?style=flat-square)](https://www.npmjs.com/package/workspace-resolver)
+![License](https://img.shields.io/npm/l/workspace-resolver?style=flat-square)
 
 Utility for development on multiple library packages in a workspace. Creates aliases for library packages so you don't have to rebuild both packages to see changes. This can be considered an alternative to [monorepos](https://github.com/lerna/lerna) and [`npm-link`](https://docs.npmjs.com/cli/link).
 
