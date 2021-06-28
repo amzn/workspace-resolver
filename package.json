@@ -1,6 +1,6 @@
 {
   "name": "workspace-resolver",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Utility for development on multiple library packages in a workspace. Creates aliases for library packages so you don't have to rebuild both packages to see changes",
   "main": "src/index.js",
   "files": [
